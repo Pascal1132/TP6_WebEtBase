@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:3306
--- Généré le :  Sam 30 Mai 2020 à 21:09
+-- Généré le :  Dim 31 Mai 2020 à 17:45
 -- Version du serveur :  10.1.44-MariaDB-0+deb9u1
 -- Version de PHP :  7.0.33-0+deb9u7
 
@@ -30,17 +30,18 @@ CREATE TABLE `chambres` (
   `numeroChambre` int(11) NOT NULL,
   `nombreLits` int(11) NOT NULL,
   `typeChambre_fk` varchar(60) NOT NULL,
-  `efface` tinyint(1) NOT NULL
+  `efface` tinyint(1) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Contenu de la table `chambres`
 --
 
-INSERT INTO `chambres` (`numeroChambre`, `nombreLits`, `typeChambre_fk`, `efface`) VALUES
-(1, 12, 'Deluxe', 0),
-(2, 13, 'Standard', 0),
-(121, 2, 'Deluxe', 1);
+INSERT INTO `chambres` (`numeroChambre`, `nombreLits`, `typeChambre_fk`, `efface`, `image`) VALUES
+(4, 2, 'Deluxe', 0, ''),
+(6, 2, 'Économique', 0, ''),
+(8, 4, 'Standard', 0, '');
 
 -- --------------------------------------------------------
 
@@ -54,6 +55,7 @@ CREATE TABLE `reservations` (
   `dateDepart` date NOT NULL,
   `numeroChambre_fk` int(11) NOT NULL,
   `numeroUtilisateur_fk` int(255) NOT NULL,
+  `masque` tinyint(1) NOT NULL,
   `efface` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -61,10 +63,11 @@ CREATE TABLE `reservations` (
 -- Contenu de la table `reservations`
 --
 
-INSERT INTO `reservations` (`numeroReservation`, `dateArrivee`, `dateDepart`, `numeroChambre_fk`, `numeroUtilisateur_fk`, `efface`) VALUES
-(40, '2020-05-28', '2020-05-30', 121, 1, 1),
-(41, '2020-05-21', '2020-05-21', 1, 2, 0),
-(42, '2020-05-14', '2020-05-15', 2, 3, 0);
+INSERT INTO `reservations` (`numeroReservation`, `dateArrivee`, `dateDepart`, `numeroChambre_fk`, `numeroUtilisateur_fk`, `masque`, `efface`) VALUES
+(47, '2020-06-05', '2020-06-05', 4, 3, 0, 0),
+(48, '2020-05-21', '2020-05-28', 4, 2, 0, 0),
+(49, '2020-05-22', '2020-05-28', 4, 4, 0, 0),
+(50, '2020-05-22', '2020-05-28', 4, 2, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -150,7 +153,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `numeroReservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `numeroReservation` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --

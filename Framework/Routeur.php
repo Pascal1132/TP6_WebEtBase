@@ -25,7 +25,7 @@ class Routeur {
         try {
             // Fusion des paramètres GET et POST de la requête
             // Permet de gérer uniformément ces deux types de requête HTTP
-            $requete = new Requete(array_merge($_GET, $_POST));
+            $requete = new Requete(array_merge($_GET, $_POST, $_FILES));
 
             $controleur = $this->creerControleur($requete);
             $action = $this->creerAction($requete);

@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2c64302-7b54-4069-86cc-3be7aafc2226" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BD/gestion_Hotel.sql" beforeDir="false" afterPath="$PROJECT_DIR$/BD/gestion_Hotel.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/dev.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/dev.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/prod.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/prod.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contenu/Diagrammes/actuel.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Contenu/Diagrammes/actuel.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controleur/ControleurAdminchambres.php" beforeDir="false" afterPath="$PROJECT_DIR$/Controleur/ControleurAdminchambres.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Framework/Routeur.php" beforeDir="false" afterPath="$PROJECT_DIR$/Framework/Routeur.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Modele/Chambre.php" beforeDir="false" afterPath="$PROJECT_DIR$/Modele/Chambre.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/Adminchambres/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/Adminchambres/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vue/Chambres/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Vue/Chambres/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ceV196d4qY0XgyNTvOKJIkvKOL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,7 +35,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="E:/Downloads/blogue_avec_images-master" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -38,10 +50,21 @@
       <option name="presentableId" value="Default" />
       <updated>1590888827413</updated>
       <workItem from="1590888828815" duration="631000" />
+      <workItem from="1590959382272" duration="5029000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1590959459617">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/-1440.87.1440.870@0.0.1920.1050" timestamp="1590959459617" />
+    <state x="-1219" y="166" key="SettingsEditor" timestamp="1590959433244">
+      <screen x="-1440" y="87" width="1440" height="870" />
+    </state>
+    <state x="-1219" y="166" key="SettingsEditor/0.0.1920.1050/-1440.87.1440.870@-1440.87.1440.870" timestamp="1590959433244" />
   </component>
 </project>

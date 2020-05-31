@@ -2,7 +2,7 @@
 
 
 <h3 style="color:var(--couleurOrange);font-weight: bold;"><?php if($msgCode!=="litsErr" && $msgCode!=="courrielErr" && $msgCode!=="chambreErr" && $msgCode !=="typeErr")echo $msg;?></h3>
-<form action="Adminchambres/ajouter" method="post" class="formulaire" >
+<form action="Adminchambres/ajouter" method="post" class="formulaire" enctype="multipart/form-data">
     <h2>Nouvelle Chambre</h2>
     <ul>
         <li><label for="numero" style="float: left;">Numéro de la chambre:</label>
@@ -17,6 +17,7 @@
         </li>
         <span style="color:black;font-weight: bold;"><?php if($msgCode=="typeErr")echo $msg;?></span>
         <li><label for="courriel" style="float:left;">Courriel de l'administrateur:</label><input class="entreeTexteNouvChambre" id="courriel" name="courriel" type="email"/></li>
+        <li><label for="image" style="float:left;">Photo de la chambre (facultatif):</label><input class="entreeTexteNouvChambre" id="image" name="image" type="file"/></li>
         <span style="color:black;font-weight: bold;"><?php if($msgCode=="courrielErr")echo $msg;?></span>
 
 
@@ -41,6 +42,7 @@
 
             <th>Nombre de lits</th>
             <th>Type de chambre</th>
+            <th>Image</th>
         </tr>
         <?php foreach ($chambresTab as $ligne) {
             ?>
@@ -50,6 +52,11 @@
                 <td><?=$ligne['numeroChambre']?></td>
                 <td><?=$ligne['nombreLits']?></td>
                 <td><?=$ligne['typeChambre_fk']?></td>
+                <td>
+                    <?php if( $ligne['image'] != ""){?>
+                    <img src="Contenu/Images/Chambres/<?=$ligne['image']?>" alt="<?=$ligne['numeroChambre']?>">
+                    <?php }?>
+                </td>
             </tr>
             <?php
         }

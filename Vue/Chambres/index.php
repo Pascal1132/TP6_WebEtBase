@@ -14,6 +14,7 @@
 
             <th>Nombre de lits</th>
             <th>Type de chambre</th>
+            <th>Image</th>
         </tr>
         <?php foreach ($chambresTab as $ligne) {
             ?>
@@ -23,6 +24,11 @@
                 <td><?=$ligne['numeroChambre']?></td>
                 <td><?=$ligne['nombreLits']?></td>
                 <td><?=$ligne['typeChambre_fk']?></td>
+                <td>
+                    <?php if( $ligne['image'] != ""){?>
+                        <img src="Contenu/Images/Chambres/<?=$ligne['image']?>" alt="<?=$ligne['numeroChambre']?>">
+                    <?php }?>
+                </td>
             </tr>
             <?php
         }

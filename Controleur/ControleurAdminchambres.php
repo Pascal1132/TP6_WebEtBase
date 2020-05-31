@@ -31,6 +31,7 @@ class ControleurAdminchambres extends ControleurAdmin
             if(filter_var($chambre['courriel'], FILTER_VALIDATE_EMAIL)){
                 if(filter_var($chambre['lits'], FILTER_VALIDATE_INT, array("options" => array("min_range"=>1)))){
                     if($this->typeChambre->estTypeValide($chambre['type'])){
+
                         $this->chambre->insertionChambre($chambre);
                         $msgInfo="succesNouvChambre";
                     }else{
@@ -61,6 +62,13 @@ class ControleurAdminchambres extends ControleurAdmin
         $chambre['lits'] = $this->requete->getParametre('lits');
         $chambre['type'] = $this->requete->getParametre('type');
         $chambre['courriel'] = $this->requete->getParametre('courriel');
+        $chambre['image'] = "";
+
+        if ($this->requete->existeParametre('image')){
+            $chambre['image'] = $this->requete->getParametre('image');
+
+        }
+
         $msgInfo = "";
         // Vérifier que le numéro est un entier supérieur ou égal à 0
         if(filter_var($chambre['numero'], FILTER_VALIDATE_INT, array("options" => array("min_range"=>1))) && !$this->chambre->estNoChambrePresent($chambre['numero'])){
